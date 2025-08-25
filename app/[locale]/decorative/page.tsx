@@ -1,6 +1,7 @@
 import { ProductGrid } from "@/components/product-grid"
 import { ProductFilters } from "@/components/product-filters"
 import { ProductSearch } from "@/components/product-search"
+import { Suspense } from "react"
 
 interface DecorativePageProps {
   params: { locale: string }
@@ -22,7 +23,7 @@ const translations = {
   },
 }
 
-export default function DecorativePage({ params, searchParams }: DecorativePageProps) {
+export default async function DecorativePage({ params, searchParams }: DecorativePageProps) {
   const { locale } = params
   const t = translations[locale as keyof typeof translations] || translations.en
 
@@ -40,7 +41,9 @@ export default function DecorativePage({ params, searchParams }: DecorativePageP
         </div>
         <div className="lg:col-span-3">
           <div className="mb-6">
-            <ProductSearch locale={locale} />
+            <Suspense>
+              <ProductSearch locale={locale} />
+            </Suspense>
           </div>
           <ProductGrid locale={locale} category="decorative" searchParams={searchParams} />
         </div>
