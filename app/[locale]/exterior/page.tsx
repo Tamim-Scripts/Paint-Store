@@ -4,7 +4,7 @@ import { ProductSearch } from "@/components/product-search"
 
 interface ExteriorPageProps {
   params: { locale: string }
-  searchParams: { search?: string; color?: string; price?: string }
+  // searchParams: { search?: string; color?: string; price?: string }
 }
 
 const translations = {
@@ -22,7 +22,7 @@ const translations = {
   },
 }
 
-export default function ExteriorPage({ params, searchParams }: ExteriorPageProps) {
+export default function ExteriorPage({ params }: ExteriorPageProps) {
   const { locale } = params
   const t = translations[locale as keyof typeof translations] || translations.en
 
@@ -36,13 +36,13 @@ export default function ExteriorPage({ params, searchParams }: ExteriorPageProps
 
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
         <div className="lg:col-span-1">
-          <ProductFilters locale={locale} category="exterior" />
+          {/* <ProductFilters locale={locale} category="exterior" /> */}
         </div>
         <div className="lg:col-span-3">
           <div className="mb-6">
-            <ProductSearch locale={locale} />
+            {/* <ProductSearch locale={locale} /> */}
           </div>
-          <ProductGrid locale={locale} category="exterior" searchParams={searchParams} />
+          {/* <ProductGrid locale={locale} category="exterior" searchParams={searchParams} /> */}
         </div>
       </div>
     </div>

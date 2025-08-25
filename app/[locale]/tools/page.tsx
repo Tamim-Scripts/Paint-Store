@@ -4,7 +4,7 @@ import { ProductSearch } from "@/components/product-search"
 
 interface ToolsPageProps {
   params: { locale: string }
-  searchParams: { search?: string; price?: string; brand?: string }
+  // searchParams: { search?: string; price?: string; brand?: string }
 }
 
 const translations = {
@@ -22,7 +22,7 @@ const translations = {
   },
 }
 
-export default function ToolsPage({ params, searchParams }: ToolsPageProps) {
+export default function ToolsPage({ params }: ToolsPageProps) {
   const { locale } = params
   const t = translations[locale as keyof typeof translations] || translations.en
 
@@ -36,13 +36,13 @@ export default function ToolsPage({ params, searchParams }: ToolsPageProps) {
 
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
         <div className="lg:col-span-1">
-          <ProductFilters locale={locale} category="tools" />
+          {/* <ProductFilters locale={locale} category="tools" /> */}
         </div>
         <div className="lg:col-span-3">
           <div className="mb-6">
-            <ProductSearch locale={locale} />
+            {/* <ProductSearch locale={locale} /> */}
           </div>
-          <ProductGrid locale={locale} category="tools" searchParams={searchParams} />
+          {/* <ProductGrid locale={locale} category="tools" searchParams={searchParams} /> */}
         </div>
       </div>
     </div>
