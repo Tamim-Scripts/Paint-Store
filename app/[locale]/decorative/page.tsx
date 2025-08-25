@@ -6,7 +6,7 @@ import { Suspense, use } from "react"
 
 interface DecorativePageProps {
   params: { locale: string }
-  searchParams: { search?: string; color?: string; price?: string }
+  // searchParams: { search?: string; color?: string; price?: string }
 }
 
 const translations = {
@@ -24,7 +24,7 @@ const translations = {
   },
 }
 
-export default async function DecorativePage({ params, searchParams }: DecorativePageProps) {
+export default async function DecorativePage({ params }: DecorativePageProps) {
   const { locale } = params
   const t = translations[locale as keyof typeof translations] || translations.en
 
