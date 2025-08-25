@@ -1,7 +1,8 @@
+'use client'
 import { ProductGrid } from "@/components/product-grid"
 import { ProductFilters } from "@/components/product-filters"
 import { ProductSearch } from "@/components/product-search"
-import { Suspense } from "react"
+import { Suspense, use } from "react"
 
 interface DecorativePageProps {
   params: { locale: string }
