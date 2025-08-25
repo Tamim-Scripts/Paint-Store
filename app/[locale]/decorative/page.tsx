@@ -38,7 +38,7 @@ export default async function DecorativePage({ params, searchParams }: Decorativ
 
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
         <div className="lg:col-span-1">
-          <ProductFilters locale={locale} category="decorative" />
+          {/* <ProductFilters locale={locale} category="decorative" /> */}
         </div>
         {/* <div className="lg:col-span-3">
           <div className="mb-6">
