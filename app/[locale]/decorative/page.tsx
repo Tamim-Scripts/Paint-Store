@@ -40,14 +40,14 @@ export default async function DecorativePage({ params, searchParams }: Decorativ
         <div className="lg:col-span-1">
           <ProductFilters locale={locale} category="decorative" />
         </div>
-        <div className="lg:col-span-3">
+        {/* <div className="lg:col-span-3">
           <div className="mb-6">
-            {/* <Suspense>
+            <Suspense>
               <ProductSearch locale={locale} />
-            </Suspense> */}
+            </Suspense>
           </div>
           <ProductGrid locale={locale} category="decorative" searchParams={searchParams} />
-        </div>
+        </div> */}
       </div>
     </div>
   )
